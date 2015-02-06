@@ -1,0 +1,85 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Final Year Project Dissertation Document
+% Author: Krishan Wyse
+% Maintainer: Krishan Wyse
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Enable optimal configuration for use of the English language
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenx}
+
+% Set page dimensions
+\usepackage[
+  a4paper,
+  width=150mm,
+  top=25mm,
+  bottom=25mm
+]{geometry}
+
+% Format paragraphs
+\usepackage{parskip}
+\usepackage{setspace}
+\onehalfspacing{}
+
+% Rename contents
+\renewcommand*\contentsname{Table of Contents}
+
+% Set up an IEEE-styled reference section and give bibliography source
+\usepackage[
+  backend=biber,
+  style=ieee,
+  citestyle=authoryear,
+  sorting=ynt,
+  firstinits=true,
+  uniquename=init
+  % maxcitenames=2
+]{biblatex}
+\addbibresource{references.bib}
+
+% Enable and configure hyperlinks
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  filecolor=black,
+  urlcolor=blue,
+  pdftitle={Final Year Project Dissertation},
+  pdfstartview={FitV}
+}
+\usepackage[hypcap]{caption} % Show top of figure when selecting link, rather than caption
+
+% Enable images
+\usepackage{graphicx}
+\graphicspath{{images/},{figures/}}
+
+% Format titles
+\usepackage{titlesec}
+\titleformat{\chapter}{\Large\bfseries\usefont{OT1}{phv}{b}{n}\color{black}}{\llap{\thechapter\quad}}{0em}{}
+\titleformat{\section}{\large\bfseries\usefont{OT1}{phv}{b}{n}\color{black}}{\llap{\thesection\quad}}{0em}{}
+\titleformat{\subsection}{\large\bfseries\usefont{OT1}{phv}{b}{n}\color{black}}{\llap{\thesubsection\quad}}{0em}{}
+\titleformat{\subsubsection}{\bfseries\usefont{OT1}{phv}{b}{n}\color{black}}{\llap{\thesubsubsection\quad}}{0em}{}
+\titlespacing*{\chapter}{0pt}{-30pt}{40pt}
+
+% Use custom headers and footers
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyhead[L]{\rule[-2ex]{0pt}{2ex}\small \Title}
+  \fancyfoot[R]{\thepage}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+  \setlength{\headheight}{20pt}
+}
+\pagestyle{fancy}
+  \fancyhf{}
+\fancyhead[L]{\rule[-2ex]{0pt}{2ex}\small \Title}
+\fancyfoot[R]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\setlength{\headheight}{20pt}
+
+% Calculate word count
+\immediate\write18{texcount -1 -sum chapters/[[:digit:]]*.tex > wordcount.sum}
+\newcommand{\wordcount}{\input{wordcount.sum}}

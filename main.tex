@@ -9,7 +9,10 @@
 \documentclass[11pt]{report}
 
 % Contains package imports and document configurations
-\input{config/preamble.tex}
+\input{config/core_preamble.tex}
+
+% Uncomment this to include code or text snippets - requires Pygments
+% \input{config/additional_preamble.tex}
 
 \begin{document}
 
@@ -23,9 +26,11 @@
 \input{front_matter/abstract.tex}
 \input{front_matter/acknowledgements.tex}
 \tableofcontents
-\listoffigures
 \listoftables
-\listoflistings
+\listoffigures
+
+% Uncomment this if including code or text snippets
+% \listoflistings
 
 % Chapters
 \input{chapters/chapter1.tex}

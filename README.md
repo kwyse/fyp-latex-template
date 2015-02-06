@@ -4,7 +4,7 @@ This is a LaTeX template for undergraduate Computer Science dissertations.
 
 ## Depenedencies
 
-* A TeX distrbution ([MacTeX](www.tug.org/mactex/) on Mac OS X and
+* A TeX distrbution ([MacTeX](http://www.tug.org/mactex/) on Mac OS X and
   [proTeXt](http://www.tug.org/protext/) on Windows are good choices)
 * A good text editor
 * (Optional) [Pygments](http://pygments.org/), for source code highlighting if

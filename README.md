@@ -30,7 +30,7 @@ will also need to rerun Biber:
 
     biber ./main
 
-Therefore, to a correctly formatted document, run the commands as so
+Therefore, to get a correctly formatted document, run the commands as so
 (particularly before you submit!):
 
     pdflatex -shell-escape ./main.tex
@@ -49,7 +49,7 @@ respectively. Vector graphics are supported and their use is encouraged!
 If you want to edit any global formatting options, visit the `config` folder.
 Word count is calculated automatically but relies on the chapter files keeping
 their current names. You can change the names but you will have to edit the
-word command regex command in the `config/core_preamble.tex` file for the word
+word count regex command in the `config/core_preamble.tex` file for the word
 count command to work again.
 
 ## Need a primer on LaTeX?

@@ -26,15 +26,17 @@
 % Rename contents
 \renewcommand*\contentsname{Table of Contents}
 
-% Set up an IEEE-styled reference section and give bibliography source
+% Set up an Harvard-styled reference section and give bibliography source
+\usepackage{csquotes}
+\usepackage[british]{babel}
 \usepackage[
   backend=biber,
-  style=ieee,
+  style=authoryear,
   citestyle=authoryear,
   sorting=ynt,
   firstinits=true,
-  uniquename=init
-  % maxcitenames=2
+  uniquename=init,
+  urldate=long
 ]{biblatex}
 \addbibresource{references.bib}
 

@@ -81,5 +81,5 @@
 \setlength{\headheight}{20pt}
 
 % Calculate word count
-\immediate\write18{texcount -1 -sum chapters/[[:digit:]]*.tex > wordcount.sum}
+\immediate\write18{texcount -1 -sum chapters/chapter[[:digit:]].tex > wordcount.sum}
 \newcommand{\wordcount}{\input{wordcount.sum}}

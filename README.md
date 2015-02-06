@@ -37,7 +37,7 @@ Therefore, to a correctly formatted document, run the commands as so
     biber ./main
     pdflatex -shell-escape ./main.tex
 
-# Template structure
+## Template structure
 
 Data pertaining to you, such as the title of your dissertation and your student
 ID number, are in the `config/metadata.tex` file. You will need to edit this to
@@ -52,7 +52,7 @@ their current names. You can change the names but you will have to edit the
 word command regex command in the `config/core_preamble.tex` file for the word
 count command to work again.
 
-# Need a primer on LaTeX?
+## Need a primer on LaTeX?
 
 [LaTeX on Wikibooks](http://en.wikibooks.org/wiki/LaTeX) and
 [ShareLaTeX](https://www.sharelatex.com/learn/Main_Page) are both fantastic

@@ -1,0 +1,46 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Final Year Project Dissertation Template
+% Author: Krishan Wyse
+% Maintainer: Krishan Wyse
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[11pt]{report}
+
+% Contains package imports and document configurations
+\input{config/preamble.tex}
+
+\begin{document}
+
+% Contains macro definitions
+\input{config/metadata.tex}
+
+% Title page
+\input{front_matter/title.tex}
+
+% Front matter
+\input{front_matter/abstract.tex}
+\input{front_matter/acknowledgements.tex}
+\tableofcontents
+\listoffigures
+\listoftables
+\listoflistings
+
+% Chapters
+\input{chapters/chapter1.tex}
+\input{chapters/chapter2.tex}
+\input{chapters/chapter3.tex}
+\input{chapters/chapter4.tex}
+\input{chapters/chapter5.tex}
+\input{chapters/chapter6.tex}
+\input{chapters/chapter7.tex}
+
+% Back matter
+\input{back_matter/references.tex}
+
+% Appendices
+\appendix
+\input{appendices/personal_reflection.tex}
+
+\end{document}
